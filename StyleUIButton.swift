@@ -9,9 +9,9 @@
 import UIKit
 
 class StyleUIButton: UIButton {
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.backgroundColor = UIColor(displayP3Red: 0.0, green: 0.0, blue: 0.0, alpha: 0.2)
-        super.touchesBegan(touches, with: event)
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.backgroundColor = UIColor(displayP3Red: 0.0, green: 0.0, blue: 0.0, alpha: 0.1)
+        super.touchesMoved(touches, with: event)
     }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.backgroundColor = UIColor(displayP3Red: 0.0, green: 0.0, blue: 0.0, alpha: 0)

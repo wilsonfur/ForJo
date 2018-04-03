@@ -48,7 +48,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="a49-Zp-H1g"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="動一動" id="WJx-gZ-P19"/>
+                    <tabBarItem key="tabBarItem" title="動一動" image="tabShake" id="WJx-gZ-P19">
+                        <inset key="imageInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-3"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="extendSports" destination="Udc-89-Gk8" id="ngP-C2-2It"/>
                         <outlet property="shakeBodySegmentControl" destination="96I-wz-qah" id="n5F-CS-20D"/>
@@ -380,11 +383,35 @@
                         <color key="backgroundColor" red="1" green="0.96862745098039216" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="DSk-Rb-Rnd"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="肝好知識" id="LfQ-9j-H4Q"/>
+                    <tabBarItem key="tabBarItem" title="肝好知識" image="tabKnowledge" id="LfQ-9j-H4Q">
+                        <inset key="imageInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-3"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a0b-DU-gCL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="920.79999999999995" y="796.55172413793105"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VmH-5Y-bXr">
+            <objects>
+                <viewController id="P6d-5S-bHc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SJB-dv-9HZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="test.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="MJC-Uu-gWn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="qjf-FW-mqR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EbH-wY-vH3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="449" y="797"/>
         </scene>
         <!--首頁-->
         <scene sceneID="CTz-M5-j3C">
@@ -443,7 +470,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sHD-0V-meR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="首頁" id="rHf-vW-dge"/>
+                    <tabBarItem key="tabBarItem" title="首頁" image="tabHome" id="rHf-vW-dge">
+                        <inset key="imageInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-3"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRs-BM-xNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="imV-BG-Wrd">
@@ -533,7 +563,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="JWL-Nq-lg8"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="我的" id="Z0T-UM-srw"/>
+                    <tabBarItem key="tabBarItem" title="我的" image="tabMy" id="Z0T-UM-srw">
+                        <inset key="imageInsets" minX="0.0" minY="-2" maxX="0.0" maxY="0.0"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-3"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="MySegmentControl" destination="KD0-kF-hZ0" id="yo7-4T-MM6"/>
                         <outlet property="review" destination="5V2-qs-WhL" id="Lgc-EB-rw4"/>
@@ -761,10 +794,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFd-pt-Gph">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFd-pt-Gph" customClass="StyleUIButton" customModule="ForJo" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button" image="d02"/>
+                                                    <connections>
+                                                        <segue destination="Rfc-HE-83t" kind="presentation" modalTransitionStyle="crossDissolve" id="bbr-br-EyK"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -777,10 +813,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvG-Bz-XsV">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvG-Bz-XsV" customClass="StyleUIButton" customModule="ForJo" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button" image="d02"/>
+                                                    <connections>
+                                                        <segue destination="Fre-et-84f" kind="presentation" modalTransitionStyle="crossDissolve" id="60p-kj-9FG"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1128,35 +1167,6 @@
             </objects>
             <point key="canvasLocation" x="3542" y="-44"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="1QO-U2-5du">
-            <objects>
-                <viewController id="Jv0-XV-I3G" customClass="ViewController" customModule="ForJo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Yny-Ow-Khz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0db-6g-TKz">
-                                <rect key="frame" x="164" y="408" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="gameResult:" destination="Jv0-XV-I3G" eventType="touchUpInside" id="c0Z-U9-c6X"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KuT-YK-bim">
-                                <rect key="frame" x="67" y="222" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="tov-E9-rpE"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b90-yu-2sJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3292" y="826"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="nhW-Ba-dgJ">
             <objects>
@@ -1321,6 +1331,66 @@
             </objects>
             <point key="canvasLocation" x="3464.8000000000002" y="3157.4212893553226"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="ILH-9Q-ba7">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="Rfc-HE-83t" customClass="HomeViewController" customModule="ForJo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nTa-sz-Rsc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="p06" translatesAutoresizingMaskIntoConstraints="NO" id="AVa-3U-YxK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gZ-ac-xUx" customClass="StyleUIButton" customModule="ForJo" customModuleProvider="target">
+                                <rect key="frame" x="10" y="600" width="355" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title=" "/>
+                                <connections>
+                                    <action selector="test2:" destination="Rfc-HE-83t" eventType="touchUpInside" id="r91-PG-eYu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="cyU-yf-C9X"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ryR-1o-mVc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2530" y="826"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="H54-ke-Au4">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="Fre-et-84f" customClass="HomeViewController" customModule="ForJo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7e4-2R-Dob">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="p07" translatesAutoresizingMaskIntoConstraints="NO" id="5Te-Bh-sNo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZo-Sj-Jh7" customClass="StyleUIButton" customModule="ForJo" customModuleProvider="target">
+                                <rect key="frame" x="10" y="600" width="355" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title=" "/>
+                                <connections>
+                                    <action selector="test2:" destination="Fre-et-84f" eventType="touchUpInside" id="7eo-Ut-ZJi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ubK-rw-Shh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hd5-Ss-TwZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3183" y="825"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bg01" width="20" height="750"/>
@@ -1337,6 +1407,8 @@
         <image name="p03" width="375" height="667"/>
         <image name="p04" width="375" height="667"/>
         <image name="p05" width="375" height="667"/>
+        <image name="p06" width="375" height="667"/>
+        <image name="p07" width="375" height="667"/>
         <image name="s01.png" width="750" height="272"/>
         <image name="s02" width="375" height="980"/>
         <image name="s03" width="375" height="816"/>
@@ -1351,5 +1423,10 @@
         <image name="t09" width="200" height="85"/>
         <image name="t10.png" width="400" height="180"/>
         <image name="t11" width="200" height="90"/>
+        <image name="tabHome" width="21" height="22"/>
+        <image name="tabKnowledge" width="18" height="23"/>
+        <image name="tabMy" width="18" height="22"/>
+        <image name="tabShake" width="25" height="25"/>
+        <image name="test.jpg" width="750" height="1344"/>
     </resources>
 </document>
