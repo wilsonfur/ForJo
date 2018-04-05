@@ -46,7 +46,6 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        switch1.delegate = self
         // Do any additional setup after loading the view.
     }
 
