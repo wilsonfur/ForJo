@@ -1,51 +1,37 @@
 //
 //  ViewController.swift
-//  ForJo
+//  switchcustomdemo
 //
-//  Created by wilson on 2018/4/3.
-//  Copyright © 2018年 wilson. All rights reserved.
+//  Created by Yogesh Patel on 14/12/17.
+//  Copyright © 2017 Yogesh Patel. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UINavigationController {
-    
-    @IBAction func gameResult(_ sender: Any) {
-        
-        let when = DispatchTime.now() + 0.65 // change 2 to desired number of seconds
-
-        DispatchQueue.main.asyncAfter(deadline: when) {
-            print("hello")
+class ViewController: UIViewController, SwiftySwitchDelegate {
    
+    
+    func valueChanged(sender: SwiftySwitch) {
+        if switch1.isOn{
+            self.view.backgroundColor = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)
+        }else{
+            self.view.backgroundColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
         }
     }
-        
+    
+
+    @IBOutlet var switch1: SwiftySwitch!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        let when = DispatchTime.now() + 2 // change 2 to desired number of seconds
-        for i in 1...6 {
-            DispatchQueue.main.asyncAfter(deadline: when) {
-                print("hello")
-            }
-        }
-       
-        // Do any additional setup after loading the view.
+       switch1.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+

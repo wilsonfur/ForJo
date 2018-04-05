@@ -9,7 +9,9 @@
 import UIKit
 
 class ShakeBodyViewController: UIViewController {
-
+    @IBAction func unwindToPageB(segue: UIStoryboardSegue) {
+        print("unwindToPageB...")
+    }
     @IBOutlet weak var shakeBodySegmentControl: UISegmentedControl!
     @IBOutlet weak var trainingClass: UIView!
     @IBOutlet weak var extendSports: UIView!

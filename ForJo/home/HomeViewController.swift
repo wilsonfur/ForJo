@@ -7,9 +7,36 @@
 //
 
 import UIKit
+var HomeStateCount = 1
 
 class HomeViewController: UIViewController {
+   
+    @IBAction func switchHomeState(_ sender: UIButton) {
+        HomeStateCount += 1
+        if HomeStateCount%3 == 2 {
+            homeState.image = UIImage(named:"h02")
 
+            
+        }else if HomeStateCount%3 == 0{
+            homeState.image = UIImage(named:"h03")
+        
+            
+        }else if HomeStateCount%3 == 1 {
+            homeState.image = UIImage(named:"h01")
+        
+            
+        }
+    }
+    @IBOutlet weak var homeState: UIImageView!
+    @IBOutlet weak var sharePopUp: UIImageView!
+    @IBAction func shareToday(_ sender: Any) {
+        sharePopUp.image = UIImage(named:"p01")
+    }
+    @IBAction func weekData(_ sender: Any) {
+        sharePopUp.image = UIImage(named:"p01-1")
+    }
+    
+    
     @IBAction func test(_ sender: Any) {
     }
     @IBAction func test2(_ sender: UIButton) {
@@ -17,10 +44,9 @@ class HomeViewController: UIViewController {
         
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        switch1.delegate = self
         // Do any additional setup after loading the view.
     }
 

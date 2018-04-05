@@ -10,6 +10,8 @@ import UIKit
 
 class TrainingUINavigationItem: UINavigationItem{
 
+    
     @IBAction func test3(_ sender: UIButton) {
+        
     }
 }
