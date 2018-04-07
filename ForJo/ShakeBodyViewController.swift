@@ -9,9 +9,8 @@
 import UIKit
 
 class ShakeBodyViewController: UIViewController {
-    @IBAction func unwindToPageB(segue: UIStoryboardSegue) {
-        print("unwindToPageB...")
-    }
+    @IBOutlet weak var etswitch: UIImageView!
+    
     @IBOutlet weak var shakeBodySegmentControl: UISegmentedControl!
     @IBOutlet weak var trainingClass: UIView!
     @IBOutlet weak var extendSports: UIView!
@@ -20,9 +19,11 @@ class ShakeBodyViewController: UIViewController {
         switch shakeBodySegmentControl.selectedSegmentIndex
         {
         case 0:
+            etswitch.image = UIImage(named: "et01")
             trainingClass.isHidden = false
             extendSports.isHidden = true
         case 1:
+            etswitch.image = UIImage(named: "et02")
             trainingClass.isHidden = true
             extendSports.isHidden = false
         default:

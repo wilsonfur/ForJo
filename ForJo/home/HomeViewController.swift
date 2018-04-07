@@ -8,9 +8,21 @@
 
 import UIKit
 var HomeStateCount = 1
+var setCount = 1
 
-class HomeViewController: UIViewController {
-   
+class HomeViewController: UIViewController,SwiftySwitchDelegate {
+    
+    func valueChanged(sender: SwiftySwitch) {
+        if switch1.isOn{
+           remiderBG.image = UIImage(named: "set01")
+        }else{
+            remiderBG.image = UIImage(named: "set02")
+        }
+    }
+    @IBOutlet var switch1: SwiftySwitch!
+    @IBOutlet weak var remiderBG: UIImageView!
+
+  
     @IBAction func switchHomeState(_ sender: UIButton) {
         HomeStateCount += 1
         if HomeStateCount%3 == 2 {
@@ -46,6 +58,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+         switch1?.delegate = self
         // Do any additional setup after loading the view.
     }
 

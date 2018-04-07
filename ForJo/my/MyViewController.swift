@@ -12,6 +12,7 @@ var KGCount = 1
 
 class MyViewController: UIViewController {
   
+    @IBOutlet weak var mySwitchTab: UIImageView!
     @IBOutlet weak var state64A: UIButton!
     @IBOutlet weak var state63: UIButton!
     @IBOutlet weak var state54: UIButton!
@@ -49,9 +50,11 @@ class MyViewController: UIViewController {
         case 0:
             review.isHidden = false
             weightRecord.isHidden = true
+            mySwitchTab.image = UIImage(named: "s01")
         case 1:
             review.isHidden = true
             weightRecord.isHidden = false
+            mySwitchTab.image = UIImage(named: "s01-1")
         default:
             break;
         }
